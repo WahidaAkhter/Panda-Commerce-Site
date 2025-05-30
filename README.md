@@ -8,5 +8,18 @@ HTML5 – Markup for content structure
 
 CSS3 – Styling and layout
 
-Bootstrap 5 – Responsive grid and pre-built UI components
+JavaScript (Vanilla) – Added interactivity and dynamic behavior without using any libraries or frameworks
+
+Netlify – Used for fast and easy deployment of the live website
+
+# 📌 Features
+Responsive layout for desktop and mobile
+
+Clean UI with smooth scrolling
+
+Interactive elements using JavaScript
+
+Fast and lightweight with no external frameworks
+
+
 
