@@ -10,7 +10,7 @@ CSS3 – Styling and layout
 
 JavaScript (Vanilla) – Added interactivity and dynamic behavior without using any libraries or frameworks
 
-Netlify – Used for fast and easy deployment of the live website
+Netlify - Deployed the frontend on Netlify, ensuring a fast, reliable, and seamless user experience.
 
 # 📌 Features
 Responsive layout for desktop and mobile
