@@ -21,7 +21,11 @@ h3 { font-size: 1.75rem; font-weight: 700; color: #111; }
 h5 { font-weight: 700; }
 
 .panda-bg-info-background {
-    background-color: #fceae8;
+    background-color: #f7e1df; /* Slightly deeper than #fceae8 */
+}
+
+footer.bg-light {
+    background-color: #f1f3f5 !important; /* Noticeably darker than standard #f8f9fa */
 }
 
 /* Base Components */
