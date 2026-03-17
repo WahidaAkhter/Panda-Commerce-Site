@@ -1,3 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    padding-top: 70px;
+}
 .panda-bg-info-background{
     background-color:#fceae8;
 }
@@ -31,4 +37,13 @@
 .text-warning {
     color: #ffc107 !important;
     letter-spacing: 2px;
+}
+.nav-icon {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+    color: #333 !important;
+}
+.nav-icon:hover {
+    color: #FF136F !important;
 }
