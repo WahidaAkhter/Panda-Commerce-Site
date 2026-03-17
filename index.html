@@ -69,7 +69,7 @@
                                     for music lovers and professionals alike.
                                 </p>
                                 <h1>$420</h1>
-                                <button class="buy-now-button">Buy Now</button>
+                                <button class="buy-now-button" onclick="showToast()">Buy Now</button>
                             </div>
                             <div class="col-lg-5">
                                 <img src="images/banner-images/headphone.png" class="d-block w-100" alt="...">
@@ -88,7 +88,7 @@
                                     Bring the stadium experience to your living room.
                                 </p>
                                 <h1>$1200</h1>
-                                <button class="buy-now-button">Buy Now</button>
+                                <button class="buy-now-button" onclick="showToast()">Buy Now</button>
                             </div>
                             <div class="col-lg-5">
                                 <img src="images/banner-images/tv.png" class="d-block w-100" alt="...">
@@ -108,7 +108,7 @@
                                     graphics. The ultimate center for all your entertainment.
                                 </p>
                                 <h1>$600</h1>
-                                <button class="buy-now-button">Buy Now</button>
+                                <button class="buy-now-button" onclick="showToast()">Buy Now</button>
                             </div>
                             <div class="col-lg-5">
                                 <img src="images/banner-images/xbox.png" class="d-block w-100" alt="...">
@@ -173,7 +173,7 @@
                             <p class="card-text">Lightweight and breathable design for maximum comfort during your daily runs or intense gym workouts.</p>
                         </div>
                         <div class="m-3">
-                            <button class="buy-now-button">buy now</button>
+                            <button class="buy-now-button" onclick="showToast()">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -190,7 +190,7 @@
                             <p class="card-text">Iconic style meets modern performance. Featuring advanced cushioning for all-day arch support and durability.</p>
                         </div>
                         <div class="m-3">
-                            <button class="buy-now-button">buy now</button>
+                            <button class="buy-now-button" onclick="showToast()">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -207,7 +207,7 @@
                             <p class="card-text">Bold design with signature Air technology. Durable, stylish, and engineered for the fast-paced urban lifestyle.</p>
                         </div>
                         <div class="m-3">
-                            <button class="buy-now-button">buy now</button>
+                            <button class="buy-now-button" onclick="showToast()">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -230,7 +230,7 @@
                             <p class="card-text">A versatile and rugged backpack designed for adventurers who need reliability and premium style on the move.</p>
                         </div>
                         <div class="m-3">
-                            <button class="buy-now-button">buy now</button>
+                            <button class="buy-now-button" onclick="showToast()">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
                             <p class="card-text">Sleek, splash-proof, and spacious enough for all your tech essentials. The perfect companion for professional city life.</p>
                         </div>
                         <div class="m-3">
-                            <button class="buy-now-button">buy now</button>
+                            <button class="buy-now-button" onclick="showToast()">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -264,7 +264,7 @@
                             <p class="card-text">Professional sophistication meets organizational excellence. Carry your laptop and documents with total confidence and ease.</p>
                         </div>
                         <div class="m-3">
-                            <button class="buy-now-button">buy now</button>
+                            <button class="buy-now-button" onclick="showToast()">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -292,6 +292,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <!-- Toast Notification Structure -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+        <div id="liveToast" class="toast hide align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="bi bi-cart-check-fill me-2"></i> Added to cart!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showToast() {
+            var toastLiveExample = document.getElementById('liveToast');
+            var toast = new bootstrap.Toast(toastLiveExample);
+            toast.show();
+        }
+    </script>
 </body>
 
 </html>
