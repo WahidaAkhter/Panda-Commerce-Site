@@ -10,4 +10,25 @@
     border: none;
     border-radius: 8px;
     padding: 9px 25px;
+    transition: transform 0.2s ease;
+}
+.buy-now-button:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+.card-title {
+    font-weight: 700;
+    color: #333;
+}
+.text-warning {
+    color: #ffc107 !important;
+    letter-spacing: 2px;
 }
