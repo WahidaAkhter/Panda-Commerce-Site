@@ -280,12 +280,17 @@
         <section class="container d-flex justify-content-center align-items-center panda-bg-info-background rounded-3"
             style="height: 300px;" id="Subscribe">
             <div>
-                <h1>LET'S STAY IN TOUCH
-                </h1>
-                <p>Get updates on sales, specials and more
-                </p>
-                <input class="form-control" type="text" placeholder="your email"><br>
-                <button class="buy-now-button">submit</button>
+                <h1>LET'S STAY IN TOUCH</h1>
+                <p>Get updates on sales, specials and more</p>
+                <form id="subscribeForm" onsubmit="return handleSubscribe(event)">
+                    <div class="mb-3">
+                        <label for="newsletterEmail" class="form-label fw-bold">Email Address</label>
+                        <input id="newsletterEmail" class="form-control" type="email" placeholder="Enter your email address" required>
+                        <div id="emailError" class="text-danger small mt-1" style="display: none;">Please enter a valid email address.</div>
+                        <div id="subscribeSuccess" class="text-success fw-bold mt-2" style="display: none;">Thanks for subscribing! 🎉</div>
+                    </div>
+                    <button type="submit" class="buy-now-button">Submit</button>
+                </form>
             </div>
         </section>
     </main>
@@ -316,6 +321,35 @@
             var toastLiveExample = document.getElementById('liveToast');
             var toast = new bootstrap.Toast(toastLiveExample);
             toast.show();
+        }
+
+        function handleSubscribe(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('newsletterEmail');
+            const emailError = document.getElementById('emailError');
+            const successMsg = document.getElementById('subscribeSuccess');
+            const email = emailInput.value;
+
+            // Simple regex for email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                emailError.style.display = 'block';
+                successMsg.style.display = 'none';
+                return false;
+            }
+
+            // Success case
+            emailError.style.display = 'none';
+            successMsg.style.display = 'block';
+            emailInput.value = '';
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+
+            return false;
         }
     </script>
 </body>
